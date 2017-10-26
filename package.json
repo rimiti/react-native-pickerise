@@ -1,0 +1,60 @@
+{
+	"name": "react-native-pickerise",
+	"version": "0.1.0",
+	"description": "React Native cross-plateform (iOS / Android) modal picker/selector highly customizable.",
+	"main": "dist/index.js",
+	"scripts": {
+		"clean": "rm -rf dist",
+		"build": "npm run clean && babel src/ -d dist/",
+		"test": "jest"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/rimiti/react-native-pickerise.git"
+	},
+	"keywords": [
+		"picker",
+		"modal",
+		"popup",
+		"react modal",
+		"react picker",
+		"react select",
+		"react select option",
+		"react-native",
+		"react-native-pickerise",
+		"popup-select",
+		"react-component",
+		"ios",
+		"android"
+	],
+	"author": "Dimitri DO BAIRRO <dimitri.dobairro@dimsolution.com> (https://github.com/rimiti)",
+	"license": "MIT",
+	"homepage": "https://github.com/rimiti/react-native-pickerise/blob/master/README.md",
+	"dependencies": {
+		"babel-plugin-flow-react-proptypes": "^5.1.1",
+		"prop-types": "^15.5.8"
+	},
+	"devDependencies": {
+		"babel-cli": "^6.26.0",
+		"babel-eslint": "^7.2.3",
+		"babel-jest": "20.0.3",
+		"babel-preset-react-native": "^3.0.1",
+		"eslint": "^4.5.0",
+		"eslint-config-airbnb": "^15.1.0",
+		"eslint-plugin-import": "^2.2.0",
+		"eslint-plugin-jsx-a11y": "^6.0.2",
+		"eslint-plugin-react": "^7.3.0",
+		"flow-bin": "^0.53.1",
+		"jest": "^20.0.4",
+		"jest-react-native": "^18.0.0",
+		"react": "^15.6.1",
+		"react-native": "0.42",
+		"react-test-renderer": "^15.6.1"
+	},
+	"jest": {
+		"preset": "jest-react-native",
+		"modulePathIgnorePatterns": [
+			"popup-dialog-example/node_modules"
+		]
+	}
+}
