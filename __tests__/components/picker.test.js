@@ -6,17 +6,15 @@ import Pickerise from '../../src/components/picker';
 describe('Pickerise', () => {
   it('Renders correctly', () => {
     const items = [
-      {section: true, label: 'Cars'}, {label: 'Audi'}, {label: 'Dodge'}, {label: 'Ford'}, {label: 'Renault'},
-      {section: true, label: 'Bikes'}, {label: 'Kawasaki'}, {label: 'Suzuki'}, {label: 'Triumph'}];
+      { section: true, label: 'Cars' }, { label: 'Audi' }, { label: 'Dodge' }, { label: 'Ford' }, { label: 'Renault' },
+      { section: true, label: 'Bikes' }, { label: 'Kawasaki' }, { label: 'Suzuki' }, { label: 'Triumph' }];
 
-    const tree = renderer.create(
-      <Pickerise
-        items={items}
-        initValue="Select me"
-        onChange={(option) => {
+    const tree = renderer.create(<Pickerise
+      items={items}
+      initValue="Select me"
+      onChange={() => {
         }}
-      />
-    ).toJSON();
+    />).toJSON();
 
     expect(tree).toMatchSnapshot();
   });
