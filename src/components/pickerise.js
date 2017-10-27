@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Modal, Text, ScrollView, TouchableOpacity } from 'react-native';
 import PropTypes from 'prop-types';
-import styles from '../styles/picker';
+import styles from '../styles/pickerise';
 
 export default class Pickerise extends Component {
   static propTypes = {
@@ -46,7 +46,6 @@ export default class Pickerise extends Component {
     super(props);
     this.onChange = this.onChange.bind(this);
     this.state = {
-      items: this.props.items.map((item, key) => Object.assign(item, { key })),
       animationType: 'none',
       modalVisible: false,
       transparent: false,
@@ -82,7 +81,7 @@ export default class Pickerise extends Component {
             <View style={styles.itemsContainer}>
               <ScrollView keyboardShouldPersistTaps>
                 <View style={{ paddingHorizontal: 10 }}>
-                  {this.state.items.map((item) => {
+                  {this.props.items.map((item) => {
                     if (item.section) {
                       return (
                         <View key={item.key} style={[styles.sectionStyle, this.props.sectionStyle]}>
