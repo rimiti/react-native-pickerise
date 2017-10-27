@@ -4,9 +4,17 @@
 	"description": "React Native cross-plateform (iOS / Android) modal picker/selector highly customizable.",
 	"main": "dist/index.js",
 	"scripts": {
-		"clean": "rm -rf dist",
-		"build": "npm run clean && babel src/ -d dist/",
-		"test": "jest"
+		"clean": "rm -rf coverage dist tmp",
+		"lint": "eslint .",
+		"postlint": "npm run typecheck",
+		"typecheck": "flow check",
+		"pretest": "npm run lint",
+		"prepare": "npm run test && npm run build",
+		"test": "npm run test-only",
+		"test-only": "jest --coverage",
+		"test:watch": "jest --watch",
+		"build": "npm run build && babel src/ -d dist/",
+		"build:watch": "babel --watch src/ -d dist/"
 	},
 	"repository": {
 		"type": "git",
