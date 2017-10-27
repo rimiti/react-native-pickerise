@@ -71,7 +71,7 @@
   "jest": {
     "preset": "jest-react-native",
     "setupFiles": [
-      "./setup.js"
+      "./config/enzyme.js"
     ],
     "coverageThreshold": {
       "global": {
