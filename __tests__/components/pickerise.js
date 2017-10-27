@@ -1,6 +1,6 @@
 import 'react-native';
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { shallow } from 'enzyme';
 import Pickerise from '../../src/components/pickerise';
 
 describe('Pickerise', () => {
@@ -9,13 +9,12 @@ describe('Pickerise', () => {
       { section: true, label: 'Cars' }, { label: 'Audi' }, { label: 'Dodge' }, { label: 'Ford' }, { label: 'Renault' },
       { section: true, label: 'Bikes' }, { label: 'Kawasaki' }, { label: 'Suzuki' }, { label: 'Triumph' }];
 
-    const tree = renderer.create(<Pickerise
+    const wrapper = shallow(<Pickerise
       items={items}
       initValue="Select me"
       onChange={() => {
-        }}
-    />).toJSON();
-
-    expect(tree).toMatchSnapshot();
+      }}
+    />);
+    expect(wrapper).toMatchSnapshot();
   });
 });
