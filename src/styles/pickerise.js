@@ -1,20 +1,23 @@
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
-  overlay: {
+  overlayStyle: {
     flex: 1,
     padding: '5%',
     justifyContent: 'center',
     backgroundColor: 'rgba(0,0,0,0.7)',
   },
-  itemsContainer: {
+  itemsContainerStyle: {
     borderRadius: 5,
     flexShrink: 1,
     marginBottom: 8,
     padding: 8,
     backgroundColor: 'rgba(255,255,255,0.8)',
   },
-  cancelContainer: {
+  itemsContainerChildStyle: {
+    paddingHorizontal: 10,
+  },
+  cancelContainerStyle: {
     flexGrow: 1,
     maxHeight: 30,
     alignSelf: 'stretch',
@@ -40,12 +43,12 @@ export default StyleSheet.create({
     color: '#333',
     fontSize: 16,
   },
-  item: {
+  itemStyle: {
     padding: 8,
     borderBottomWidth: 1,
     borderBottomColor: '#ccc',
   },
-  itemText: {
+  itemTextStyle: {
     textAlign: 'center',
     fontSize: 16,
     color: 'rgba(0,118,255,0.9)',
@@ -55,7 +58,7 @@ export default StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: '#ccc',
   },
-  sectionText: {
+  sectionTextStyle: {
     textAlign: 'center',
     fontSize: 16,
   },
