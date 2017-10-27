@@ -3,7 +3,7 @@ import { View, Modal, Text, ScrollView, TouchableOpacity } from 'react-native';
 import PropTypes from 'prop-types';
 import styles from '../styles/picker';
 
-export default class ModalPicker extends Component {
+export default class Pickerise extends Component {
   static propTypes = {
     items: PropTypes.arrayOf(PropTypes.shape({
       label: PropTypes.string.isRequired,
@@ -42,11 +42,11 @@ export default class ModalPicker extends Component {
     cancelText: 'cancel',
   };
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.onChange = this.onChange.bind(this);
     this.state = {
-      items: this.props.items.map((item, key) => Object.assign(item, key)),
+      items: this.props.items.map((item, key) => Object.assign(item, { key })),
       animationType: 'none',
       modalVisible: false,
       transparent: false,
@@ -55,7 +55,7 @@ export default class ModalPicker extends Component {
   }
 
   componentDidMount() {
-    this.state({ selected: this.props.initValue, cancelText: this.props.cancelText });
+    this.state = { selected: this.props.initValue, cancelText: this.props.cancelText };
   }
 
   componentWillReceiveProps(nextProps) {
