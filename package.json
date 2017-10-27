@@ -13,7 +13,7 @@
 		"test": "npm run test-only",
 		"test-only": "jest --coverage",
 		"test:watch": "jest --watch",
-		"build": "npm run build && babel src/ -d dist/",
+		"build": "babel src/ -d dist/",
 		"build:watch": "babel --watch src/ -d dist/"
 	},
 	"repository": {
@@ -40,12 +40,13 @@
 	"homepage": "https://github.com/rimiti/react-native-pickerise/blob/master/README.md",
 	"dependencies": {
 		"babel-plugin-flow-react-proptypes": "^7.0.0",
-		"prop-types": "^15.5.8"
+		"prop-types": "^15.5.8",
+		"react": "^16.0.0",
+		"react-native": "^0.49.3"
 	},
 	"devDependencies": {
 		"babel-cli": "^6.26.0",
 		"babel-eslint": "^8.0.1",
-		"babel-jest": "21.2.0",
 		"babel-preset-react-native": "^4.0.0",
 		"eslint": "^4.5.0",
 		"eslint-config-airbnb": "^16.1.0",
@@ -55,8 +56,6 @@
 		"flow-bin": "^0.57.3",
 		"jest": "^21.2.1",
 		"jest-react-native": "^18.0.0",
-		"react": "^16.0.0",
-		"react-native": "0.49",
 		"react-test-renderer": "^16.0.0"
 	},
 	"jest": {
