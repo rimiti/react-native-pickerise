@@ -16,7 +16,7 @@ export default class Pickerise extends Component {
     selectStyle: View.propTypes.style,
     item: View.propTypes.style,
     cancelStyle: View.propTypes.style,
-    section: View.propTypes.style,
+    sectionStyle: View.propTypes.style,
     overlay: View.propTypes.style,
     itemText: Text.propTypes.style,
     sectionText: Text.propTypes.style,
@@ -34,7 +34,7 @@ export default class Pickerise extends Component {
     selectTextStyle: {},
     item: {},
     itemText: {},
-    section: {},
+    sectionStyle: {},
     sectionText: {},
     cancelStyle: {},
     cancelTextStyle: {},
@@ -85,7 +85,7 @@ export default class Pickerise extends Component {
                   {this.state.items.map((item) => {
                     if (item.section) {
                       return (
-                        <View key={item.key} style={[styles.section, this.props.section]}>
+                        <View key={item.key} style={[styles.sectionStyle, this.props.sectionStyle]}>
                           <Text style={[styles.sectionText, this.props.sectionText]}>
                             {item.label}
                           </Text>

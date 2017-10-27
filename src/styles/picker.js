@@ -50,7 +50,7 @@ export default StyleSheet.create({
     fontSize: 16,
     color: 'rgba(0,118,255,0.9)',
   },
-  section: {
+  sectionStyle: {
     padding: 8 * 2,
     borderBottomWidth: 1,
     borderBottomColor: '#ccc',
