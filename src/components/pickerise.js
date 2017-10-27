@@ -39,7 +39,7 @@ export default class Pickerise extends Component {
     cancelStyle: {},
     cancelTextStyle: {},
     overlay: {},
-    cancelText: 'cancel',
+    cancelText: 'Cancel',
   };
 
   constructor(props) {
