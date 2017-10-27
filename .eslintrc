@@ -1,9 +1,6 @@
 {
 	"extends": "airbnb",
 	"parser": "babel-eslint",
-	"ecmaFeatures": {
-		"jsx": true
-	},
 	"env": {
 		"es6": true
 	},
