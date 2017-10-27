@@ -1,3 +1,3 @@
-import Picker from './components/picker';
+import Pickerise from './components/pickerise';
 
-export default Picker;
+export default Pickerise;
