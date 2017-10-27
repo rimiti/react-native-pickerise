@@ -11,15 +11,17 @@ export default class Pickerise extends Component {
     })),
     onChange: PropTypes.func,
     initValue: PropTypes.string,
-    style: View.propTypes.style,
     cancelText: PropTypes.string,
+    style: View.propTypes.style,
+    itemsContainerStyle: View.propTypes.style,
+    itemsChildStyle: View.propTypes.style,
     selectStyle: View.propTypes.style,
-    item: View.propTypes.style,
+    itemStyle: View.propTypes.style,
     cancelStyle: View.propTypes.style,
     sectionStyle: View.propTypes.style,
-    overlay: View.propTypes.style,
-    itemText: Text.propTypes.style,
-    sectionText: Text.propTypes.style,
+    overlayStyle: View.propTypes.style,
+    itemTextStyle: Text.propTypes.style,
+    sectionTextStyle: Text.propTypes.style,
     cancelTextStyle: Text.propTypes.style,
     selectTextStyle: Text.propTypes.style,
   };
@@ -30,15 +32,17 @@ export default class Pickerise extends Component {
     },
     initValue: 'Select',
     style: {},
+    itemsContainerStyle: {},
+    itemsChildStyle: {},
     selectStyle: {},
     selectTextStyle: {},
-    item: {},
-    itemText: {},
+    itemStyle: {},
+    itemTextStyle: {},
     sectionStyle: {},
-    sectionText: {},
+    sectionTextStyle: {},
     cancelStyle: {},
     cancelTextStyle: {},
-    overlay: {},
+    overlayStyle: {},
     cancelText: 'Cancel',
   };
 
@@ -78,15 +82,15 @@ export default class Pickerise extends Component {
           onRequestClose={() => this.setState({ modalVisible: false })}
           animationType={this.state.animationType}
         >
-          <View style={[styles.overlay, this.props.overlay]}>
-            <View style={styles.itemsContainer}>
+          <View style={[styles.overlayStyle, this.props.overlayStyle]}>
+            <View style={[styles.itemsContainerStyle, this.props.itemsContainerStyle]}>
               <ScrollView keyboardShouldPersistTaps>
-                <View style={{ paddingHorizontal: 10 }}>
+                <View style={[styles.itemsContainerChildStyle, this.props.itemsChildStyle]}>
                   {this.state.items.map((item) => {
                     if (item.section) {
                       return (
                         <View key={item.key} style={[styles.sectionStyle, this.props.sectionStyle]}>
-                          <Text style={[styles.sectionText, this.props.sectionText]}>
+                          <Text style={[styles.sectionTextStyle, this.props.sectionTextStyle]}>
                             {item.label}
                           </Text>
                         </View>
@@ -94,8 +98,10 @@ export default class Pickerise extends Component {
                     }
                     return (
                       <TouchableOpacity key={item.key} onPress={() => this.onChange(item)}>
-                        <View style={[styles.item, this.props.item]}>
-                          <Text style={[styles.itemText, this.props.itemText]}>{item.label}</Text>
+                        <View style={[styles.itemStyle, this.props.itemStyle]}>
+                          <Text style={[styles.itemTextStyle, this.props.itemTextStyle]}>
+                            {item.label}
+                          </Text>
                         </View>
                       </TouchableOpacity>
                     );
@@ -103,7 +109,7 @@ export default class Pickerise extends Component {
                 </View>
               </ScrollView>
             </View>
-            <View style={styles.cancelContainer}>
+            <View style={styles.cancelContainerStyle}>
               <TouchableOpacity onPress={() => this.setState({ modalVisible: false })}>
                 <View style={[styles.cancelStyle, this.props.cancelStyle]}>
                   <Text style={[styles.cancelTextStyle, this.props.cancelTextStyle]}>
