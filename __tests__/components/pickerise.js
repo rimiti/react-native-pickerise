@@ -1,7 +1,7 @@
 import 'react-native';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Pickerise from '../../src/components/picker';
+import Pickerise from '../../src/components/pickerise';
 
 describe('Pickerise', () => {
   it('Renders correctly', () => {
