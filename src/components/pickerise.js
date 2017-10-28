@@ -51,15 +51,12 @@ export default class Pickerise extends Component {
     this.onChange = this.onChange.bind(this);
     this.state = {
       items: this.props.items.map((item, key) => Object.assign(item, { key })),
+      selected: this.props.initValue,
+      cancelText: this.props.cancelText,
       animationType: 'none',
       modalVisible: false,
       transparent: false,
-      selected: 'Select',
     };
-  }
-
-  componentDidMount() {
-    this.state = { selected: this.props.initValue, cancelText: this.props.cancelText };
   }
 
   componentWillReceiveProps(nextProps) {
@@ -113,7 +110,7 @@ export default class Pickerise extends Component {
               <TouchableOpacity onPress={() => this.setState({ modalVisible: false })}>
                 <View style={[styles.cancelStyle, this.props.cancelStyle]}>
                   <Text style={[styles.cancelTextStyle, this.props.cancelTextStyle]}>
-                    {this.props.cancelText}
+                    {this.state.cancelText}
                   </Text>
                 </View>
               </TouchableOpacity>
