@@ -18,15 +18,58 @@
 React Native cross-plateform (iOS/Android) modal picker/selector highly customizable.
 
 ## Install
+
 ```
-$ npm install react-native-pickerise --save
+$ yarn add react-native-pickerise
 ```
 
-## Features
+## Demo
+
+<!-- ![Example](https://github.com/rimiti/react-native-pickerise/blob/master/demo/android.gif) -->
+<img src="https://github.com/rimiti/react-native-pickerise/blob/master/demo/android.gif" height="550">
+
+## Examples
+
+```
+const items = [
+      { section: true, label: 'Cars' }, { label: 'Audi' }, { label: 'Dodge' }, { label: 'Ford' }, { label: 'Renault' },
+      { section: true, label: 'Bikes' }, { label: 'Kawasaki' }, { label: 'Suzuki' }, { label: 'Triumph' }
+      ];
+
+<Pickerise
+    selectStyle={{borderWidth: 0}}
+		style={{borderWidth: 10, backgroundColor: 'red'}}
+    items={items}
+    initValue="Select me !"
+    onChange={(item) => {
+      console.log(`You chose ${item.label}`)
+    }}
+/>
+
+```
 
 ## Documentation
 
-## Examples
+```
+Props                 Type                 Description                                                 Usage
+-----------------------------------------------------------------------------------------------------------------
+items                 {array of objects}   With a unique key and label
+onChange              {function}           Callback function, when the users has selected an item      (optional)
+initValue             {string}             Text that is initially shown on the button                  (optional)
+cancelText            {string}             Text of the cancel button                                   (optional)
+style                 {object}             Style definitions for the global element                    (optional)
+itemsContainerStyle   {object}             Style definitions for the items container element           (optional)
+itemsChildStyle       {object}             Style definitions for the itemsChild element                (optional)
+selectStyle           {object}             Style definitions for the select element                    (optional)
+itemStyle             {object}             Style definitions for the item element                      (optional)
+cancelStyle           {object}             Style definitions for the cancel element                    (optional)
+sectionStyle          {object}             Style definitions for the section element                   (optional)
+overlayStyle          {object}             Style definitions for the overlay element                   (optional)
+itemTextStyle         {object}             Style definitions for the item text element                 (optional)
+sectionTextStyle      {object}             Style definitions for the section text element              (optional)
+cancelTextStyle       {object}             Style definitions for the cancel text element               (optional)
+selectTextStyle       {object}             Style definitions for the select text element               (optional)
+```
 
 ## Scripts
 
