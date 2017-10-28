@@ -10,5 +10,6 @@ node_js:
   - 6
 install:
   - yarn
+  - yarn add enzyme enzyme-adapter-react-16 react react-dom react-native
 after_success:
   - yarn run test && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
