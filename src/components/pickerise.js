@@ -84,7 +84,7 @@ export default class Pickerise extends Component {
         >
           <View style={[styles.overlayStyle, this.props.overlayStyle]}>
             <View style={[styles.itemsContainerStyle, this.props.itemsContainerStyle]}>
-              <ScrollView keyboardShouldPersistTaps>
+              <ScrollView keyboardShouldPersistTaps="always">
                 <View style={[styles.itemsContainerChildStyle, this.props.itemsChildStyle]}>
                   {this.state.items.map((item) => {
                     if (item.section) {
