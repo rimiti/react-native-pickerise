@@ -1,14 +1,13 @@
 {
   "name": "react-native-pickerise",
   "description": "React Native cross-plateform (iOS/Android) modal picker/selector highly customizable.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "homepage": "https://github.com/rimiti/react-native-pickerise/blob/master/README.md",
   "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
     "clean": "rm -rf coverage dist tmp",
     "lint": "eslint .",
-    "pretest": "npm run lint",
     "prepare": "npm run test && npm run build",
     "test": "npm run test-only",
     "test-only": "jest --coverage",
