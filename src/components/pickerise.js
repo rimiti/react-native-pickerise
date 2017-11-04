@@ -14,7 +14,7 @@ export default class Pickerise extends Component {
     cancelText: PropTypes.string,
     style: View.propTypes.style,
     itemsContainerStyle: View.propTypes.style,
-    itemsChildStyle: View.propTypes.style,
+    itemsContainerChildStyle: View.propTypes.style,
     selectStyle: View.propTypes.style,
     itemStyle: View.propTypes.style,
     cancelStyle: View.propTypes.style,
@@ -35,7 +35,7 @@ export default class Pickerise extends Component {
     initValue: 'Select',
     style: {},
     itemsContainerStyle: {},
-    itemsChildStyle: {},
+    itemsContainerChildStyle: {},
     selectStyle: {},
     selectTextStyle: {},
     itemStyle: {},
@@ -84,7 +84,11 @@ export default class Pickerise extends Component {
           <View style={[styles.overlayStyle, this.props.overlayStyle]}>
             <View style={[styles.itemsContainerStyle, this.props.itemsContainerStyle]}>
               <ScrollView keyboardShouldPersistTaps="always">
-                <View style={[styles.itemsContainerChildStyle, this.props.itemsChildStyle]}>
+                <View style={[
+                  styles.itemsContainerChildStyle,
+                  this.props.itemsContainerChildStyle,
+                ]}
+                >
                   {this.state.items.map((item) => {
                     if (item.section) {
                       return (
