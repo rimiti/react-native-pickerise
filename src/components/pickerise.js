@@ -24,6 +24,8 @@ export default class Pickerise extends Component {
     sectionTextStyle: Text.propTypes.style,
     cancelTextStyle: Text.propTypes.style,
     selectTextStyle: Text.propTypes.style,
+    modalAnimationType: Modal.propTypes.animationType,
+    modalTransparent: Modal.propTypes.transparent,
   };
 
   static defaultProps = {
@@ -44,6 +46,8 @@ export default class Pickerise extends Component {
     cancelTextStyle: {},
     overlayStyle: {},
     cancelText: 'Cancel',
+    modalAnimationType: 'slide',
+    modalTransparent: false,
   };
 
   constructor(props) {
@@ -53,9 +57,7 @@ export default class Pickerise extends Component {
       items: this.props.items.map((item, key) => Object.assign(item, { key })),
       selected: this.props.initValue,
       cancelText: this.props.cancelText,
-      animationType: 'none',
       modalVisible: false,
-      transparent: false,
     };
   }
 
@@ -74,10 +76,10 @@ export default class Pickerise extends Component {
     return (
       <View style={this.props.style}>
         <Modal
-          transparent={this.state.transparent}
+          transparent={this.props.modalTransparent}
           visible={this.state.modalVisible}
           onRequestClose={() => this.setState({ modalVisible: false })}
-          animationType={this.state.animationType}
+          animationType={this.props.modalAnimationType}
         >
           <View style={[styles.overlayStyle, this.props.overlayStyle]}>
             <View style={[styles.itemsContainerStyle, this.props.itemsContainerStyle]}>
