@@ -20,7 +20,7 @@ React Native cross-plateform (iOS/Android) modal picker/selector highly customiz
 ## Install
 
 ```
-$ yarn add react-native-pickerise
+$ npm install react-native-pickerise --save
 ```
 
 ## Demo
