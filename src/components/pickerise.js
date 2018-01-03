@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Modal, Text, ScrollView, TouchableOpacity } from 'react-native';
+import { View, Modal, Text, ScrollView, TouchableOpacity, ViewPropTypes } from 'react-native';
 import PropTypes from 'prop-types';
 import styles from '../styles/pickerise';
 
@@ -12,14 +12,14 @@ export default class Pickerise extends Component {
     onChange: PropTypes.func,
     initValue: PropTypes.string,
     cancelText: PropTypes.string,
-    style: View.propTypes.style,
-    itemsContainerStyle: View.propTypes.style,
-    itemsContainerChildStyle: View.propTypes.style,
-    selectStyle: View.propTypes.style,
-    itemStyle: View.propTypes.style,
-    cancelStyle: View.propTypes.style,
-    sectionStyle: View.propTypes.style,
-    overlayStyle: View.propTypes.style,
+    style: ViewPropTypes.style,
+    itemsContainerStyle: ViewPropTypes.style,
+    itemsContainerChildStyle: ViewPropTypes.style,
+    selectStyle: ViewPropTypes.style,
+    itemStyle: ViewPropTypes.style,
+    cancelStyle: ViewPropTypes.style,
+    sectionStyle: ViewPropTypes.style,
+    overlayStyle: ViewPropTypes.style,
     itemTextStyle: Text.propTypes.style,
     sectionTextStyle: Text.propTypes.style,
     cancelTextStyle: Text.propTypes.style,
