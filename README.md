@@ -20,19 +20,19 @@ React Native cross-plateform (iOS/Android) modal picker/selector highly customiz
 ## Install
 
 ```
-$ npm install react-native-pickerise --save
+$ npm install @rimiti/react-native-pickerise --save
 ```
 
 ## Demo
 
-<!-- ![Example](https://github.com/rimiti/react-native-pickerise/blob/master/demo/android.gif) -->
-<img src="https://github.com/rimiti/react-native-pickerise/blob/master/demo/android.gif" height="550">
+# [![react-native-pickerise](demo/android.gif)](https://github.com/rimiti/react-native-pickerise)
 
 ## Examples 
 
 ```
 import React, {Component} from 'react';
 import {StyleSheet} from 'react-native';
+import Pickerise from '@rimiti/react-native-pickerise';
 
 export default class Example extends Component {
 	constructor(props) {
