@@ -1,7 +1,7 @@
 {
   "name": "@rimiti/react-native-pickerise",
   "description": "React Native cross-plateform (iOS/Android) modal picker/selector highly customizable.",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "homepage": "https://github.com/rimiti/react-native-pickerise/blob/master/README.md",
   "main": "dist/index.js",
   "license": "MIT",
