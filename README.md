@@ -25,7 +25,7 @@ $ npm install @rimiti/react-native-pickerise --save
 
 ## Demo
 
-# [![react-native-pickerise](demo/android.gif)](https://github.com/rimiti/react-native-pickerise)
+# [![react-native-pickerise](demo/android.gif)](https://github.com/rimiti/react-native-pickerise) [![Greenkeeper badge](https://badges.greenkeeper.io/rimiti/react-native-pickerise.svg)](https://greenkeeper.io/)
 
 ## Examples 
 
